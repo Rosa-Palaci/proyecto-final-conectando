@@ -8,11 +8,13 @@ function App() {
 
   return (
     <div className="App">
-      {tarea.nombre !== "" ? (
-        <Tareas tarea={tarea} />
-      ) : (
-        <Formulario setTarea={setTarea} />
-      )}
+      <div className="gradient-bg">
+        {tarea.nombre !== "" ? (
+          <Tareas tarea={tarea} />
+        ) : (
+          <Formulario setTarea={setTarea} />
+        )}
+      </div>
     </div>
   );
 }
