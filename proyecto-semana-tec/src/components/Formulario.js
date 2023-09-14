@@ -16,7 +16,7 @@ export function Formulario({ setTarea }) {
     }
     setError(false);
 
-    setTarea([nombre, link, date]);
+    setTarea({ nombre, link, date });
   };
 
   return (

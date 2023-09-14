@@ -4,11 +4,15 @@ import "./App.css";
 import React, { useState } from "react";
 
 function App() {
-  const [tarea, setTarea] = React.useState([]);
+  const [tarea, setTarea] = React.useState({ nombre: "", link: "", date: "" });
 
   return (
     <div className="App">
-      {tarea.length > 0 ? <Tareas /> : <Formulario setTarea={setTarea} />}
+      {tarea.nombre !== "" ? (
+        <Tareas tarea={tarea} />
+      ) : (
+        <Formulario setTarea={setTarea} />
+      )}
     </div>
   );
 }
